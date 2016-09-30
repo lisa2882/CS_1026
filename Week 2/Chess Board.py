@@ -13,3 +13,6 @@ for y in range (0,size,1):
 
 
 print(board)
+
+import math
+print(math.ceil(1.2))
