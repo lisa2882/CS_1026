@@ -41,16 +41,16 @@ if custClassification == "B":  # Budget
         totalCost += BUDGET_KILOMETER_RATE * changeKilometers
 if custClassification == "D":  # Daily
         totalCost += DAILY_PER_DAY_RATE * daysOfRental
-if changeKilometers / daysOfRental > DAILY_KILOMETER_LIMIT:
+        if changeKilometers / daysOfRental > DAILY_KILOMETER_LIMIT:
             totalCost += (changeKilometers - DAILY_KILOMETER_LIMIT * daysOfRental) * DAILY_KILOMETER_OVERAGE_CHARGE
 if custClassification == "W":  # Weekly
     totalCost += weeksOfRental * WEEKLY_PER_WEEK_RATE
     if (changeKilometers / weeksOfRental > WEEKLY_KILOMETER_LIMIT_LOW
-        & changeKilometers / weeksOfRental < WEEKLY_KILOMETER_LIMIT_HIGH):
+    and changeKilometers / weeksOfRental < WEEKLY_KILOMETER_LIMIT_HIGH):
         totalCost += WEEKLY_OVERAGE_CHARGE_LOW * weeksOfRental
-        if changeKilometers / weeksOfRental > WEEKLY_KILOMETER_LIMIT_HIGH:
-            totalCost += WEEKLY_BASE_OVERAGE_CHARGE_HIGH * weeksOfRental
-            totalCost += WEEKLY_KILOMETER_OVERAGE_CHARGE_HIGH * (changeKilometers/weeksOfRental - WEEKLY_KILOMETER_LIMIT_HIGH * weeksOfRental)
+    elif changeKilometers / weeksOfRental > WEEKLY_KILOMETER_LIMIT_HIGH:
+           totalCost += WEEKLY_BASE_OVERAGE_CHARGE_HIGH * weeksOfRental
+           totalCost += WEEKLY_KILOMETER_OVERAGE_CHARGE_HIGH * (changeKilometers/weeksOfRental - WEEKLY_KILOMETER_LIMIT_HIGH)
 # Cost Of Youth (age<25)
 if custAge < 25:
     totalCost += COST_OF_YOUTH * daysOfRental
