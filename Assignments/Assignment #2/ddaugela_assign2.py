@@ -84,7 +84,7 @@ while userInp == "cube" or userInp == "pyramid" or userInp == "ellipsoid":
 
 # Decimal formatting earlier volume calculations
 decimalCubeVolumeList = []  # Cube volumes decimal decimal
-cubeListTwo = map(float, sorted(cubeVolumeList, key=int))  # Sorts in ascending order
+cubeListTwo = map(float, sorted(cubeVolumeList, key=int))  # Sorts in ascending order, forms new list with sorted values
 for item in cubeListTwo:
     decimalCubeVolumeList.append("{0:.2f}".format(item))  # changes number of decimals to 2
 decimalPyramidVolumeList = []  # Pyramid volumes decimal formatted
@@ -100,7 +100,7 @@ for item in ellipsoidListTwo:
 # String formatting function to eliminate unwanted brackets and apostrophes
 # @param: char1 and char2 and char 3 are undesired characters, which will be replaced
 # @param: listInp is the original list that you want to be cloned and returned without the desired characters
-# @return: a clone of listInp without the desired characters that were in listInp
+# @return: a clone of listInp without the desired characters that are in listInp
 
 def replace_3_char_blank(char1, char2, char3, listInp):
     temp1 = listInp.replace(char1, "")
