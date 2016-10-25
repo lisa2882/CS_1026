@@ -1,0 +1,88 @@
+
+import math
+# @param nothing
+#  @return is the shape to be evaluated
+def ask_for_shape():
+    shapetype = ""
+    shapetype += str(input("Please input the shape that you are interested in: ")).lower()
+    return shapetype
+
+# Sanitizing shape input
+numTimesAsked = 0
+if numTimesAsked < 1:
+    userInp = ask_for_shape()
+while (not userInp == "cube" and not userInp == "pyramid"
+    and not userInp == "ellipsoid" and not userInp == "quit"):
+    print("Input is not a vaild shape")
+    numTimesAsked += 1
+    userInp = ask_for_shape()
+    if numTimesAsked > 1 and not userInp == "cube" and not userInp == "pyramid" \
+            and not userInp == "ellipsoid" and not userInp == "quit":
+        print('Valid inputs are: "cube", "pyramid", "ellipsoid" and "quit" ')
+
+#  Storing volumes of entered shapes without formatting
+cubeVolumeList = []
+pyramidVolumeList = []
+ellipsoidVolumeList = []
+
+# 3 Functions below to compute volume of entered shapes
+#  @param: nothing
+#  @return: volume of shape
+
+def volume_cube():
+    sideLength = float(input("Please input the side lengths of the cube: "))
+    volCube = sideLength ** 3
+    return volCube
+
+
+def volume_pyramid():
+    baseLength = float(input("Please input the base length of the pyramid: "))
+    heightLength = float(input("Please input the height of the pyramid: "))
+    volPyramid = 0.50*(baseLength**2)*heightLength
+    return volPyramid
+
+
+def volume_ellipsoid():
+    radius1 = float(input("Please input radius 1 of the ellipsoid: "))
+    radius2 = float(input("Please input radius 2 of the ellipsoid: "))
+    radius3 = float(input("Please input radius 3 of the ellipsoid: "))
+    volEllipsoid = (4/3) * math.pi * radius1 * radius2 * radius3
+    return volEllipsoid
+
+#  For first input, if string entered is "quit"
+quit1 = ""
+if userInp == "quit":
+        print("You have come to the end of the session")
+        print("You did not perform any volume calculations")
+        quit1 = True
+
+#  Asks user for inputs and appends results to unformatted list
+while userInp == "cube" or userInp == "pyramid" or userInp == "ellipsoid":
+    while userInp == "cube":  # cube
+        cubeVolumeList.append(volume_cube())
+        userInp = ask_for_shape()
+    while userInp == "pyramid":  # pyramid
+        pyramidVolumeList.append(volume_pyramid())
+        userInp = ask_for_shape()
+    while userInp == "ellipsoid":  # ellipsoid
+        ellipsoidVolumeList.append(volume_ellipsoid())
+        userInp = ask_for_shape()
+
+# Formatting earlier volume calculations
+formattedCubeVolumeList = []  # Cube volumes formatted
+cubeListTwo = map(float, cubeVolumeList)
+for item in cubeListTwo:
+    formattedCubeVolumeList.append("{0:.2f}".format(item))
+formattedPyramidVolumeList = []  # Pyramid volumes formatted
+pyramidListTwo = map(float, pyramidVolumeList)
+for item in pyramidListTwo:
+    formattedPyramidVolumeList.append("{0:.2f}".format(item))
+formattedEllipsoidVolumeList = []  # Ellipsoid volumes formatted
+ellipsoidListTwo = map(float, ellipsoidVolumeList)
+for item in ellipsoidListTwo:
+    formattedEllipsoidVolumeList.append("{0:.2f}".format(item))
+
+if userInp == "quit" and not quit1:
+        print("Volumes of inputted cubes are: ", formattedCubeVolumeList)
+        print("Volumes of inputted pyramids are: ", formattedPyramidVolumeList)
+        print("Volumes of inputted ellipsoids are: ", formattedEllipsoidVolumeList)
