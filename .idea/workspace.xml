@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0af33ca-0c26-46c3-8fe7-148ec9ee61c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assignments/Assignment #2/ddaugela_assign2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assignments/Assignment #2/ddaugela_assign2.py" afterPath="$PROJECT_DIR$/Assignments/Assignment #2/ddaugela_assign2.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +77,8 @@
       <file leaf-file-name="ddaugela_assign2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignments/Assignment #2/ddaugela_assign2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="83">
+              <caret line="88" column="67" selection-start-line="88" selection-start-column="67" selection-end-line="88" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -160,6 +160,7 @@
         <option value="$PROJECT_DIR$/Week 5 - Chp. 6/Testing Midterm" />
         <option value="$PROJECT_DIR$/Week 3/LOOOOOOOooooOOOOPS.py" />
         <option value="$PROJECT_DIR$/Assignments/Assignment #2/Assignment #2 1.6.py" />
+        <option value="$PROJECT_DIR$/Assignments/Assignment #2/ddaugela_assign2.py" />
       </list>
     </option>
   </component>
@@ -726,7 +727,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477433307718</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="File name now in accordance with submission policy">
+      <created>1477433643189</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1477433643189</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <option name="createBranch" value="false" />
     <option name="useBranch" value="true" />
     <servers />
@@ -807,7 +815,8 @@
     <MESSAGE value="Tested and formatted version of Assignment #2 1.0" />
     <MESSAGE value="Python File ** Tested and formatted version of Assignment #2 1.0" />
     <MESSAGE value="Added replace_3_char_blank function to format output list into pretty strings and sorted list values in ascending order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added replace_3_char_blank function to format output list into pretty strings and sorted list values in ascending order" />
+    <MESSAGE value="File name now in accordance with submission policy" />
+    <option name="LAST_COMMIT_MESSAGE" value="File name now in accordance with submission policy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1197,8 +1206,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignments/Assignment #2/ddaugela_assign2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="83">
+          <caret line="88" column="67" selection-start-line="88" selection-start-column="67" selection-end-line="88" selection-end-column="67" />
           <folding />
         </state>
       </provider>

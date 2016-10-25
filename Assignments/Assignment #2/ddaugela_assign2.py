@@ -84,9 +84,9 @@ while userInp == "cube" or userInp == "pyramid" or userInp == "ellipsoid":
 
 # Decimal formatting earlier volume calculations
 decimalCubeVolumeList = []  # Cube volumes decimal decimal
-cubeListTwo = map(float, sorted(cubeVolumeList, key=int))
+cubeListTwo = map(float, sorted(cubeVolumeList, key=int))  # Sorts in ascending order
 for item in cubeListTwo:
-    decimalCubeVolumeList.append("{0:.2f}".format(item))
+    decimalCubeVolumeList.append("{0:.2f}".format(item))  # changes number of decimals to 2
 decimalPyramidVolumeList = []  # Pyramid volumes decimal formatted
 pyramidListTwo = map(float, sorted(pyramidVolumeList, key=int))
 for item in pyramidListTwo:
