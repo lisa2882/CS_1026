@@ -80,13 +80,12 @@ while userInp == "cube" or userInp == "pyramid" or userInp == "ellipsoid":
         ellipsoidVolumeList.append(volume_ellipsoid())
         userInp = ask_for_shape()
 
-# Current Variable
 
-# Decimal formatting earlier volume calculations
+# decimal formatting earlier volume calculations
 decimalCubeVolumeList = []  # Cube volumes decimal decimal
 cubeListTwo = map(float, sorted(cubeVolumeList, key=int))  # Sorts in ascending order, forms new list with sorted values
 for item in cubeListTwo:
-    decimalCubeVolumeList.append("{0:.2f}".format(item))  # changes number of decimals to 2
+    decimalCubeVolumeList.append("{0:.2f}".format(item))  # Changes number of decimals to 2 and copies values as strings into new list
 decimalPyramidVolumeList = []  # Pyramid volumes decimal formatted
 pyramidListTwo = map(float, sorted(pyramidVolumeList, key=int))
 for item in pyramidListTwo:
@@ -111,6 +110,9 @@ def replace_3_char_blank(char1, char2, char3, listInp):
 
 if userInp == "quit" and not quit1:
         print("-" * 70)
-        print("Volumes of inputted cubes are: ", replace_3_char_blank('[', ']', "'", str(decimalCubeVolumeList)))
-        print("Volumes of inputted pyramids are: ", replace_3_char_blank('[', ']', "'", str(decimalPyramidVolumeList)))
-        print("Volumes of inputted ellipsoids are: ", replace_3_char_blank('[', ']', "'", str(decimalEllipsoidVolumeList)))
+        print("The volumes of the inputted cubes are:",
+              replace_3_char_blank('[', ']', "'", str(decimalCubeVolumeList)))
+        print("The volumes of the inputted pyramids are:",
+              replace_3_char_blank('[', ']', "'", str(decimalPyramidVolumeList)))
+        print("The volumes of the inputted ellipsoids are:",
+              replace_3_char_blank('[', ']', "'", str(decimalEllipsoidVolumeList)))
