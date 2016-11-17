@@ -1,0 +1,31 @@
+
+get the keywords file
+    make the words into one list
+    values of each word into a second list
+    (MAKE SURE THAT THEY HAVE THE SAME INDEX NUMBER THOUGH)
+
+get filename
+    check to see if file exists
+        exception handling
+split tweets up into single tweets
+(maybe use a for loop with i as the index number to make sure that all the indexes are matching up)
+(or while writing the program, print the index of each step to check)
+-use this value for lat/long later
+    split each single tweet into words
+        check to see if the word is a key word - if it is, add it to a new list of found keywords
+        (using matching index numbers)
+            calculate the total value of the keywords (make them ints)
+            -sum(list) / # of keywords found (len of keywords found list - 1)
+            -store this in a new list so that the total value index = original tweet index for lat/long function
+
+
+lat/long function
+-calculates the location of the tweet
+-splits the file to get only the coordinates
+-if statements to see which zone the tweet falls under
+    use the list that has the total value of keywords
+        -use indexes to add it to each zone
+        -have a counter for the total number of tweets in each zone or use len(list) -1
+        -if no tweets, then value = 0 (to avoid errors?)
+
+
